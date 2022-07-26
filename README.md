@@ -1,24 +1,34 @@
-# README
+# Comandos utilizados en la consola de Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Registro de usuarios
+* User.create(first_name:"Jon", last_name:"Stark", email_address:"jon@thewall.com", age:17)
+* User.create(first_name:"Cristian", last_name:"Uribe", email_address:"Cristian@thewall.com", age:29)
+* User.create(first_name:"Gaby", last_name:"Rodriguez", email_address:"Gaby@thewall.com", age:25)
+* User.create(first_name:"Sthephanie", last_name:"Jimenez", email_address:"Sthephanie@thewall.com", age:25)
 
-Things you may want to cover:
+### Validacion de registros de datos
+* User.create(first_name:"sasd", last_name:"Jasd", email_address:"asdasdasd", age:9).valid?
 
-* Ruby version
+### Validacion de mensajes
+User.create!(first_name:"s", last_name:"J", email_address:"", age:9)
 
-* System dependencies
+**_C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activerecord-6.1.6.1/lib/active_record/validations.rb:80:in `raise_validation_error': Validation failed: First name : El nombre debe contener minimo 2 caracteres, Last name : El apellido debe contener minimo 2 caracteres, Email address can't be blank, Age : La edad minima a ingresar es de 10 años y la maxima es de 150 años (ActiveRecord::RecordInvalid)_**
 
-* Configuration
+### Mostrar todos los usuarios
+User.all
 
-* Database creation
+### Mostrar todos los usuarios
+User.first
 
-* Database initialization
+### Mostrar todos los usuarios
+User.last
 
-* How to run the test suite
+### Mostrar a los usuarios y ordenarlo alfabeticamente
+User.order(:first_name)
 
-* Services (job queues, cache servers, search engines, etc.)
+### Buscar a un usuario por id y modificar su apellido
+u=User.find(3)
+u.update(last_name: "Martinez")
 
-* Deployment instructions
-
-* ...
+### Eliminar a un usuario por id
+User.find(4).destroy
