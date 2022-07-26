@@ -11,8 +11,7 @@
 
 ### Validacion de mensajes
 * User.create!(first_name:"s", last_name:"J", email_address:"", age:9)
-**_ (2.4ms)  SELECT sqlite_version(*)
-=> false_**
+**_(2.4ms)  SELECT sqlite_version(*)  => false_**
 
 **_C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activerecord-6.1.6.1/lib/active_record/validations.rb:80:in `raise_validation_error': Validation failed: First name : El nombre debe contener minimo 2 caracteres, Last name : El apellido debe contener minimo 2 caracteres, Email address can't be blank, Age : La edad minima a ingresar es de 10 años y la maxima es de 150 años (ActiveRecord::RecordInvalid)_**
 
