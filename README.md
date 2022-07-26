@@ -10,25 +10,25 @@
 * User.create(first_name:"sasd", last_name:"Jasd", email_address:"asdasdasd", age:9).valid?
 
 ### Validacion de mensajes
-User.create!(first_name:"s", last_name:"J", email_address:"", age:9)
+* User.create!(first_name:"s", last_name:"J", email_address:"", age:9)
 
 **_C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activerecord-6.1.6.1/lib/active_record/validations.rb:80:in `raise_validation_error': Validation failed: First name : El nombre debe contener minimo 2 caracteres, Last name : El apellido debe contener minimo 2 caracteres, Email address can't be blank, Age : La edad minima a ingresar es de 10 años y la maxima es de 150 años (ActiveRecord::RecordInvalid)_**
 
 ### Mostrar todos los usuarios
-User.all
+* User.all
 
 ### Mostrar todos los usuarios
-User.first
+* User.first
 
 ### Mostrar todos los usuarios
-User.last
+* User.last
 
 ### Mostrar a los usuarios y ordenarlo alfabeticamente
-User.order(:first_name)
+* User.order(:first_name)
 
 ### Buscar a un usuario por id y modificar su apellido
-u=User.find(3)
-u.update(last_name: "Martinez")
+* u=User.find(3)
+* u.update(last_name: "Martinez")
 
 ### Eliminar a un usuario por id
-User.find(4).destroy
+* User.find(4).destroy
